@@ -1,0 +1,42 @@
+{
+  "name": "electron-webpack-autoupdate",
+  "author": "letmeknowhow",
+  "version": "0.0.1",
+  "license": "MIT",
+  "build": {
+    "appId": "com.example.app",
+    "productName": "hello",
+    "directories": {
+      "buildResources": "resources",
+      "output": "build"
+    },
+    "win": {
+      "icon": "resources/rubiks.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://xxxx/static/img/"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "electron": "4.0.1",
+    "electron-builder": "20.38.4",
+    "electron-webpack": "^2.6.1",
+    "webpack": "4.28.4"
+  }
+}

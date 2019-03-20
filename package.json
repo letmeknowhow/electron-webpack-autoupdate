@@ -10,6 +10,7 @@
       "buildResources": "resources",
       "output": "build"
     },
+    "artifactName": "${productName}-${version}-${os}.${ext}",
     "win": {
       "icon": "resources/rubiks.ico",
       "target": [
@@ -19,7 +20,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://xxxx/static/img/"
+        "url": "http://xxx.com/static/img/"
       }
     ]
   },

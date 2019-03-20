@@ -1,3 +1,3 @@
 provider: generic
 url: 'http://xxx.com/static/img/'
-updaterCacheDirName: electron-webpack-quick-start-updater
+updaterCacheDirName: electron-webpack-autoupdate-updater
